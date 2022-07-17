@@ -9,7 +9,7 @@ import { PostService } from 'src/app/services/posts/post.service';
 })
 export class PostsComponent implements OnInit {
 
-  posts!: IPost[]
+  posts: IPost[]
 
   constructor(private postService: PostService) { }
 

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { urls } from 'src/app/constants';
 import { IComment } from 'src/app/models/IComment';
 
 @Injectable({
@@ -12,6 +13,6 @@ export class CommentService {
 
   getAll(): Observable<IComment[]> {
     return this.http
-      .get<IComment[]>("https://jsonplaceholder.typicode.com/comments")
+      .get<IComment[]>(urls.comments)
   }
 }

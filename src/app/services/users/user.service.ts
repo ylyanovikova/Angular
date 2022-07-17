@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+
+import { urls } from 'src/app/constants';
 import { IUser } from '../../models/IUser';
 
 @Injectable({
@@ -12,6 +14,6 @@ export class UserService {
 
   getUsers():Observable<IUser[]>{
     return this.http
-    .get<IUser[]>("https://jsonplaceholder.typicode.com/users")
+    .get<IUser[]>(urls.users)
   }
 }
