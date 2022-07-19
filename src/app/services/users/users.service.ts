@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { urls } from 'src/app/constants';
-import { IUser } from 'src/app/models';
+import { IUser, IUserDetails } from 'src/app/models';
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +16,8 @@ export class UsersService {
     return this.http
       .get<IUser[]>(urls.users)
   }
-  getById(id: string): Observable<IUser> {
+  getById(id: string): Observable<IUserDetails> {
     return this.http
-      .get<IUser>(urls.users + "/" + id)
+      .get<IUserDetails>(urls.users + "/" + id)
   }
 }
