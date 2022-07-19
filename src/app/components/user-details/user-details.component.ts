@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
 import { IUserDetails } from 'src/app/models';
 import { UsersService } from 'src/app/services';
 

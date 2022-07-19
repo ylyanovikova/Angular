@@ -33,9 +33,20 @@ import { CommentDetailsComponent } from './components/comment-details/comment-de
     AppRoutingModule,
     HttpClientModule,
     RouterModule.forRoot([
+      { path: "", redirectTo: "users", pathMatch: "full" },
       { path: "users", component: UsersComponent },
-      { path: "posts", component: PostsComponent },
-      { path: "comments", component: CommentsComponent },
+      {
+        path: "posts", component: PostsComponent,
+        children: [
+          { path: "postDetails/:id", component: PostDetailsComponent }
+        ]
+      },
+      {
+        path: "comments", component: CommentsComponent,
+        children: [
+          { path: "commentDetails/:id", component: CommentDetailsComponent }
+        ]
+      },
       { path: "userDetails/:id", component: UserDetailsComponent }
     ])
   ],
