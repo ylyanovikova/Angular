@@ -1,7 +1,9 @@
-<ul>
-  <li><a routerLink="users">Users</a></li>
-  <li><a routerLink="posts">Posts</a></li>
-  <li><a routerLink="comments">Comments</a></li>
-</ul>
+<div class="header">
+  <ul class="list">
+    <li routerLinkActive="active"><a routerLink="users">Users</a></li>
+    <li routerLinkActive="active"><a routerLink="posts">Posts</a></li>
+    <li routerLinkActive="active"><a routerLink="comments">Comments</a></li>
+  </ul>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+</div>

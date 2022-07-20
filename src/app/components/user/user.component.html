@@ -1,2 +1,2 @@
 <div>{{ user?.id }} {{ user?.name }}</div>
-<a routerLink="/userDetails/{{ user?.id }}">Details</a>
+<a [routerLink]="['/userDetails', user?.id]" [state]="{ data: user }">Details</a>
