@@ -1,4 +1,6 @@
-<div>Id: {{ postDetails?.id }}</div>
-<div>Title: {{ postDetails?.title }}</div>
-<div>{{ postDetails?.body }}</div>
-<hr />
+<div *ngIf="postDetails">
+    <div>Id: {{ postDetails.id }}</div>
+    <div>Title: {{ postDetails.title }}</div>
+    <div>{{ postDetails.body }}</div>
+    <hr />
+</div>
