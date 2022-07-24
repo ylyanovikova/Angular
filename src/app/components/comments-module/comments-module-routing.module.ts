@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CommentsComponent } from './comments/comments.component';
 
 const routes: Routes = [
-  {path: '', component: CommentsComponent}
+  { path: '', component: CommentsComponent }
 ];
 
 @NgModule({

@@ -4,10 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { PostComponent } from './components/posts-module/post/post.component';
-import { PostsComponent } from './components/posts-module/posts/posts.component';
-import { CommentComponent } from './components/comments-module/comment/comment.component';
-import { CommentsComponent } from './components/comments-module/comments/comments.component';
 import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
