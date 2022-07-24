@@ -6,12 +6,14 @@ import { PostsModuleRoutingModule } from './posts-module-routing.module';
 import { PostsComponent } from './posts/posts.component';
 import { PostComponent } from './post/post.component';
 import { PostsService } from 'src/app/services/posts.service';
+import { PostDetailsComponent } from './post-details/post-details.component';
 
 
 @NgModule({
   declarations: [
     PostsComponent,
-    PostComponent
+    PostComponent,
+    PostDetailsComponent
   ],
   imports: [
     CommonModule,

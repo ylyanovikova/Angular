@@ -8,3 +8,7 @@ li, a{
     text-decoration-style: none;
     color: black;
 }
+
+.active{
+    color: rgb(252, 159, 72);
+}

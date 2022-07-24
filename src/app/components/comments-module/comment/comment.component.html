@@ -1,1 +1,2 @@
 <h3>{{ comment.id }} - {{ comment.name }}</h3>
+<button [routerLink]="[comment.id]" [state]="{data: comment}">Show more</button>

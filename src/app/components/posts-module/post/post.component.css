@@ -1,0 +1,18 @@
+h3{
+    margin: 5px;
+}
+
+button{
+    border: 1px solid rgb(65, 64, 64);
+    background: rgb(129, 127, 127);
+    color: white;
+    border-radius: 5px;
+    transition: 300ms;
+}
+
+button:hover{
+    cursor: pointer;
+    background: white;
+    color: rgb(129, 127, 127);
+    transition: 1000ms;
+}
