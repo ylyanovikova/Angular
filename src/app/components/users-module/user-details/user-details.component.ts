@@ -14,7 +14,7 @@ export class UserDetailsComponent implements OnInit {
 
   user: IUser;
 
-  constructor(private userService: UsersService, private activatedRoute: ActivatedRoute, private router: Router) { }
+  constructor( private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(({ id }) => {
@@ -23,7 +23,7 @@ export class UserDetailsComponent implements OnInit {
       if (state) {
         this.user = state;
       } else {
-        this.userService.getById(id).subscribe(value => this.user = value)
+        this.activatedRoute.data.subscribe(({userData})=> this.user = userData)
       }
     })
   }

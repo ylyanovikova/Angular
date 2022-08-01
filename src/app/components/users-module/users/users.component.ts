@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { IUser } from 'src/app/models/IUser';
-import { UsersService } from 'src/app/services/users.service';
+import { UsersResolver } from 'src/app/services/users.resolver';
 
 @Component({
   selector: 'app-users',
@@ -12,10 +13,10 @@ export class UsersComponent implements OnInit {
 
   users: IUser[];
 
-  constructor(private usersService: UsersService) { }
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.usersService.getAll().subscribe(value => this.users = value)
+    this.activatedRoute.data.subscribe(({usersData})=> this.users = usersData)
   }
 
 }
